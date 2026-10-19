@@ -1,64 +1,66 @@
-<div align="center">
+# FLUPPY 
 
-# FLUPPY 🐾
+<p align="center">
 
-**L'assistente desktop pensato per rendere la tecnologia più personale, comprensibile e sicura.**
+  **L'assistente desktop pensato per rendere la tecnologia più personale, comprensibile e sicura.**
 
-![FLUPPY Demo](assets/fluppy-demo.gif)
+  ![FLUPPY Demo](assets/fluppy-demo.gif)
 
+</p>
 
-</div>
+---
 
-
-# La visione
+## 💡 La visione
 
 FLUPPY nasce da un'idea semplice: **l'intelligenza artificiale dovrebbe aiutarti, senza costringerti a rinunciare al controllo dei tuoi dati.**
 
 L'obiettivo è sviluppare un assistente desktop capace di affiancarti mentre usi il computer, comprendere il contesto di ciò che visualizzi e aiutarti nelle attività quotidiane, nella produttività e nella sicurezza informatica.
 
-Non un altro servizio che ti obbliga a caricare documenti su una piattaforma esterna: FLUPPY punta a un'esperienza in cui **l'elaborazione avviene direttamente sul tuo dispositivo**, con privacy, controllo e autonomia al centro del progetto.
+FLUPPY punta a un'esperienza in cui **privacy, controllo e autonomia siano al centro del progetto**, esplorando la possibilità di elaborare le informazioni direttamente sul dispositivo, senza dipendere necessariamente da servizi AI esterni.
 
-## L'AI nel tuo computer, non nei tuoi dati online
+## 🖥️ Un assistente integrato nel tuo ambiente di lavoro
 
-<div align="center">
+<p align="center">
+  <img src="assets/web1.png" alt="Concept di FLUPPY integrato con Excel" width="800">
+</p>
 
-![Concept di FLUPPY integrato con Excel](assets/web1.png)
-
-*Mockup illustrativo: FLUPPY punta a usare il contesto visibile sul desktop, senza richiedere un'integrazione separata con ogni applicazione.*
-
-</div>
+<p align="center">
+  <em>Mockup illustrativo del concept di FLUPPY in un ambiente desktop.</em>
+</p>
 
 Attraverso tecnologie come l'**OCR** (*Optical Character Recognition*), FLUPPY punta a riconoscere testi e informazioni visibili sullo schermo per fornire spiegazioni, suggerimenti e guide passo dopo passo.
 
-L'obiettivo è assisterti mentre utilizzi Excel, Word, PDF, email e browser, senza dover cambiare continuamente applicazione.
+L'obiettivo è accompagnarti mentre utilizzi Excel, Word, PDF, email e browser, riducendo la necessità di passare continuamente da un'applicazione all'altra.
 
-## 🔒 La privacy non è un optional
+## 🔒 Privacy e controllo dei dati
 
-La visione di FLUPPY privilegia un'architettura **locale, sul dispositivo dell'utente**:
+La visione di FLUPPY privilegia un'architettura **locale, sul dispositivo dell'utente**, con l'obiettivo di ridurre la dipendenza da servizi esterni.
 
-- **I tuoi dati restano tuoi.** Documenti, schermate e informazioni personali sono pensati per essere elaborati localmente.
-- **Nessun server AI esterno obbligatorio.** L'obiettivo è evitare di dover inviare i tuoi contenuti a servizi cloud per ottenere assistenza.
-- **Più controllo, meno dipendenze.** Un'architettura locale può ridurre l'esposizione dei dati a fornitori terzi e la necessità di connessioni esterne.
-- **Privacy by design.** Il trattamento delle informazioni dovrà ridurre al minimo la raccolta e la trasmissione dei dati.
+- **Privacy by design:** limitare la raccolta e la trasmissione delle informazioni.
+- **Elaborazione locale:** esplorare soluzioni che consentano di trattare documenti e schermate direttamente sul dispositivo.
+- **Maggiore controllo:** ridurre l'esposizione dei dati a fornitori terzi.
+- **Autonomia:** progettare un assistente che non richieda necessariamente l'invio dei contenuti personali a servizi cloud.
 
-> **Il principio è chiaro: i tuoi dati non dovrebbero lasciare il tuo computer solo per permetterti di usare un assistente AI.**
+> Il principio guida è semplice: **l'assistenza intelligente dovrebbe rispettare la riservatezza delle persone e lasciare loro il controllo dei propri dati.**
 
-## Un assistente, contesti diversi
+*Questi sono obiettivi progettuali: le funzionalità di elaborazione locale e le relative garanzie devono essere implementate e verificate nello sviluppo dell'assistente.*
+
+## 🧩 Un assistente, contesti diversi
 
 | Area | Obiettivo |
 |:--|:--|
 | **Family** ♡ | Accompagnare i più piccoli verso un uso consapevole e sicuro della tecnologia. |
 | **Home** ⌂ | Semplificare le attività quotidiane e aiutare chi ha meno familiarità con il computer. |
-| **Enterprise** ▦ | Supportare il lavoro rispettando policy, permessi e riservatezza dei dati aziendali. |
+| **Enterprise** ▦ | Supportare il lavoro nel rispetto delle policy aziendali e della riservatezza dei dati. |
 | **Sicurezza IT** ◈ | Rendere più comprensibili gli avvisi di sicurezza e aiutare le persone a capire come comportarsi. |
 
-## 🛡️ Nato dalla sicurezza informatica
+## 🛡️ Dalla sicurezza informatica a un assistente desktop
 
-FLUPPY nasce dall'esperienza del prototipo **DOTTY Security** e amplia la sua visione: dalla consapevolezza informatica a un assistente desktop più versatile.
+FLUPPY nasce dall'esperienza del prototipo **DOTTY Security** e amplia questa visione: dalla consapevolezza informatica a un assistente desktop più versatile.
 
-Il progetto esplora possibili integrazioni con Microsoft Defender, Splunk, Microsoft Sentinel e tecnologie SIEM, IDS e IPS. Queste integrazioni richiedono sviluppo specifico e non sono attualmente disponibili nel sito di presentazione.
+Il progetto esplora possibili integrazioni con Microsoft Defender, Splunk, Microsoft Sentinel e tecnologie **SIEM, IDS e IPS**. Queste integrazioni richiedono sviluppo specifico e non sono attualmente disponibili nel sito di presentazione.
 
-## 📁 Struttura
+## 📁 Struttura del progetto
 
 ```text
 .
@@ -71,7 +73,14 @@ Il progetto esplora possibili integrazioni con Microsoft Defender, Splunk, Micro
 └── README.md
 ```
 
-**La tua AI deve lavorare per te. Non il contrario.**
+---
 
-Ideato e sviluppato da Francesco Petillo 💚
+<p align="center">
 
+  **La tua AI deve lavorare per te. Non il contrario.**
+
+  Ideato e sviluppato da Francesco Petillo 💚
+
+  ### 🚀 [flappy.app](https://fluppy-tau.vercel.app/)
+
+</p>
