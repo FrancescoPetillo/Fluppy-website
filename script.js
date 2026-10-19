@@ -1,24 +1,19 @@
-// Interazioni leggere della pagina di presentazione.
-document.addEventListener('DOMContentLoaded', () => {
-  const links = document.querySelectorAll('a[href^="#"]');
-  links.forEach(link => link.addEventListener('click', event => {
-    const target = document.querySelector(link.getAttribute('href'));
-    if (target) {
-      event.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  }));
-
-  const sections = document.querySelectorAll('main section, body > section');
-  if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('reveal');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.08 });
-    sections.forEach(section => observer.observe(section));
-  }
+document.getElementById('year').textContent = new Date().getFullYear();
+const menuButton = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+menuButton.addEventListener('click', () => {
+  const open = navLinks.classList.toggle('open');
+  menuButton.setAttribute('aria-expanded', String(open));
+  menuButton.textContent = open ? '×' : '☰';
 });
+navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+  navLinks.classList.remove('open'); menuButton.setAttribute('aria-expanded', 'false'); menuButton.textContent = '☰';
+}));
+const revealItems = document.querySelectorAll('.profile-card,.feature-row,.deploy-card,.roadmap-grid article,.settings-card,.creator');
+revealItems.forEach(el => el.classList.add('reveal'));
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+    if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+  }), { threshold: 0.12 });
+  revealItems.forEach(el => observer.observe(el));
+} else revealItems.forEach(el => el.classList.add('visible'));
