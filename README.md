@@ -84,24 +84,3 @@ Il progetto esplora possibili integrazioni con Microsoft Defender, Splunk, Micro
   ### 🚀 [flappy.app](https://fluppy-tau.vercel.app/)
 
 </p>
-
-## Asset grafici 3D aggiunti
-
-Le nuove immagini PNG trasparenti sono raccolte in `assets/` e integrate nelle sezioni Family, Home, Enterprise, Focus, Security e Fluppy Cloud.
-
-- `fluppy-mascot.png` — mascotte principale
-- `fluppy-kids.png` — mascotte Kids
-- `castle.png` — castello / sicurezza
-- `cloud.png` — servizi cloud
-- `house.png` — esperienza Home
-- `focus.png` — focus e produttività
-- `puzzle.png` — apprendimento e gamification
-- `web.png` — mondo digitale e rete
-
-Le immagini mantengono il canale alpha (sfondo trasparente). Il sito non è stato pubblicato automaticamente: questo ZIP contiene il progetto aggiornato pronto da testare e caricare sul repository/hosting.
-
-
-## Aggiornamento grafico (20 ottobre 2026)
-- Aggiunte icone 3D per Fluppy Private, navigazione, benessere digitale, controllo famiglia, gaming awareness, download awareness e personalità modellabile.
-- Rimossi i gruppi Home ed Enterprise dalla sezione finale delle esperienze per evitare la ripetizione delle funzionalità già descritte sopra.
-- Tutti gli asset grafici sono inclusi nella cartella `assets/`.
