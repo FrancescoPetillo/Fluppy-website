@@ -111,6 +111,58 @@
     }
   }
 
+  /* ---------- manifesto: words light up with scroll ---------- */
+  $$('[data-scroll-words]').forEach(el => {
+    const wrap = node => {
+      [...node.childNodes].forEach(n => {
+        if (n.nodeType === 3) {
+          const frag = document.createDocumentFragment();
+          n.textContent.split(/(\s+)/).forEach(part => {
+            if (!part.trim()) { frag.append(part); return; }
+            const s = document.createElement('span');
+            s.className = 'sw'; s.textContent = part; frag.append(s);
+          });
+          n.replaceWith(frag);
+        } else if (n.nodeType === 1) wrap(n);
+      });
+    };
+    wrap(el);
+    const words = $$('.sw', el);
+    if (reduce) { words.forEach(w => w.classList.add('on')); return; }
+    const update = () => {
+      const r = el.getBoundingClientRect();
+      const vh = window.innerHeight;
+      const p = Math.min(1, Math.max(0, (vh * 0.88 - r.top) / (r.height + vh * 0.38)));
+      const lit = Math.round(p * words.length);
+      words.forEach((w, i) => w.classList.toggle('on', i < lit));
+    };
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  });
+
+  /* ---------- profile switcher ---------- */
+  const sw = $('.switcher');
+  if (sw) {
+    const tabs = $$('.switch-tab', sw);
+    const panels = $$('.switch-panel', sw);
+    let idx = 0, timer = null, touched = false;
+    const show = i => {
+      idx = i;
+      tabs.forEach((t, j) => { t.classList.toggle('active', j === i); t.setAttribute('aria-selected', String(j === i)); });
+      panels.forEach((p, j) => p.classList.toggle('active', j === i));
+      sw.dataset.profile = tabs[i].dataset.profile;
+    };
+    const stop = () => { clearInterval(timer); timer = null; };
+    tabs.forEach((t, i) => t.addEventListener('click', () => { touched = true; stop(); show(i); }));
+    if (!reduce && 'IntersectionObserver' in window) {
+      new IntersectionObserver(en => {
+        if (en[0].isIntersecting && !touched) { if (!timer) timer = setInterval(() => show((idx + 1) % tabs.length), 5200); }
+        else stop();
+      }, { threshold: 0.45 }).observe(sw);
+    }
+  }
+
   if (reduce || !finePointer) return; // everything below is pointer-driven eye candy
 
   document.body.classList.add('has-pointer');
